@@ -25,4 +25,4 @@ In summary, the usefulness of this project is, in my view, that it is a way of e
 which does not include a soft-core processor. 
 
 References
-[1] "Embedded Peripherals IP User Guide", UG-10085, Altera Design Hub.
+[1] "Embedded Peripherals IP User Guide", UG-01085, Altera Design Hub.
