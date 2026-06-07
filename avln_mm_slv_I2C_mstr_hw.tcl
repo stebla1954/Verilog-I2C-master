@@ -23,7 +23,7 @@ set_module_property NAME avln_mm_slv_I2C_mstr
 set_module_property VERSION 1.0
 set_module_property INTERNAL false
 set_module_property OPAQUE_ADDRESS_MAP true
-set_module_property GROUP RPI_IP_Cores
+set_module_property GROUP custom_ip
 set_module_property AUTHOR "Stephen Blake"
 set_module_property DISPLAY_NAME avln_mm_slv_I2C_mstr
 set_module_property INSTANTIATE_IN_SYSTEM_MODULE true
