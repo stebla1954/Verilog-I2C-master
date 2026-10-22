@@ -85,7 +85,7 @@ by `=> response`.
 ```
 % set x [lindex [get_service_paths master] 0]
 % open_service master $x
-% is_service_open
+% is_service_open master $x
 => 1
 ```
 
@@ -132,7 +132,7 @@ another read.
 
 and the third byte 0x34 is the byte read from memory address 0xbc.
 
-The TCL scripts read24XX02.tcl and write24XX02.tcl automate these commands. The TCL script read_24XX02.tcl
+The TCL scripts read_24XX02.tcl and write_24XX02.tcl automate these commands. The TCL script read_24XX02.tcl
 reads the bytes in the memory of the 24XX02 and writes them to a file named rd24XX02.hex. Similarly,
 TCL script write_24XX02.tcl loads a file named wr24XX02.hex and writes the contents to the memory
 of the 24XX02 EEPROM. These scripts are run from the TCL prompt by,
