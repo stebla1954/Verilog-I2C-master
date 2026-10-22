@@ -12,7 +12,7 @@ My initial plan was to add the Intel FPGA Avalon I2C (Host) core which is descri
 IP enables an FPGA to act as an I2C master controller on an I2C bus. My intention was to hook up this IP to the external
 EEPROM I2C slave. The IP has an Avalon-MM agent interface so that it can be driven by a host processor which reads and
 writes to registers in the I2C master IP component. However, I had earlier made a decision to not use a soft-core processor
-in my FPGA hardware. It seemed very difficult to drive the Intel IP without having a processor; for example, reference [14]
+in my FPGA hardware. It seemed very difficult to drive the Intel IP without having a processor; for example, reference [1]
 includes a sample device driver in C. So, I decided to write an I2C master in Verilog which would have a simple single
 register interface to perform just two operations; read a byte from a random address in the
 EEPROM, and write a byte to a random address in the EEPROM.
@@ -130,15 +130,15 @@ another read.
 => 0xad 0xde 0x34 0x02
 ```
 
-and the thirs byte 0x34 is the byte read from memory address 0xbc.
+and the third byte 0x34 is the byte read from memory address 0xbc.
 
-The TCL scripts read24XX02.tcl and write24XX02.tcl automate these commands. The TCL script rea24XX02.tcl
+The TCL scripts read24XX02.tcl and write24XX02.tcl automate these commands. The TCL script read_24XX02.tcl
 reads the bytes in the memory of the 24XX02 and writes them to a file named rd24XX02.hex. Similarly,
-TCLscript write24XX02.tcl loads a file named wr24XX02.hex and writes the contents to the memory
+TCL script write_24XX02.tcl loads a file named wr24XX02.hex and writes the contents to the memory
 of the 24XX02 EEPROM. These scripts are run from the TCL prompt by,
 
 ```
-% source read24XX02.tcl
+% source read_24XX02.tcl
 ```
 
 etc.
